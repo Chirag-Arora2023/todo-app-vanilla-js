@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 body {
-    /* background: linear-gradient(135deg, #1a1b2e, #3c1c47, #2e2b57); */
-  @apply lg:pt-16 bg-slate-900 text-gray-200 min-h-screen flex justify-center items-center
+  background: linear-gradient(135deg, #1a1b2e, #3c1c47, #2e2b57);
+  @apply lg:pt-16 dark:bg-slate-900 dark:text-gray-200 min-h-screen flex justify-center items-center
 }
 
 .container {
-  @apply w-11/12 max-w-md p-5 space-y-3 bg-slate-800 rounded-lg min-h-80 shadow-lg shadow-black flex flex-col items-center
+  background: linear-gradient(135deg, #1a1b2e, #3c1c47, #2e2b57);
+  @apply w-11/12 max-w-md p-5 space-y-3 dark:bg-slate-800 rounded-lg min-h-80 shadow-lg shadow-black flex flex-col items-center
 }
 .heading {
   @apply text-4xl font-bold mb-4
@@ -35,5 +36,5 @@ form {
 }
 
 .list-item {
-  @apply  flex p-3 border bg-slate-700 border-gray-500 rounded-md justify-between items-center my-2 hover:bg-purple-800 cursor-pointer hover:scale-x-[1.03] duration-100 select-none font-medium capitalize
+  @apply  flex p-3 border dark:bg-slate-700 border-gray-500 rounded-md justify-between items-center my-2 hover:bg-purple-800 cursor-pointer hover:scale-x-[1.03] duration-100 select-none font-medium capitalize
 }

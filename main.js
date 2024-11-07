@@ -34,19 +34,28 @@ function renderTasks() {
       <p class="list-item-text">${task.text}</p>
       <button class="btn" data-id="${task.id}">Delete</button>
     `
+    let textRender = li.getElementsByClassName('list-item-text')
+    console.log(textRender)
+    if(task.isCompleted) textRender[0].classList.add('completed')
     taskList.appendChild(li)
 
     // Adding event listener to list item for completion and deletion of the task
     li.addEventListener('click', (e)=> {
+      const id = Number(e.target.getAttribute('data-id'))
       if(e.target.tagName === 'BUTTON'){
         e.stopPropagation()
-        const id = Number(e.target.getAttribute('data-id'))
         tasks = tasks.filter( (task) => task.id !== id)
         renderTasks()
         saveToLocalStorage()
       }else {
-        li.querySelector(".list-item-text").classList.toggle('completed')
-      }
+        task.isCompleted =!task.isCompleted
+        saveToLocalStorage()
+        if(task.isCompleted) {
+           li.querySelector(".list-item-text").classList.add("completed");
+        }else {
+          li.querySelector(".list-item-text").classList.remove("completed");
+        }
+        }
     })
   })
 }
