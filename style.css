@@ -3,38 +3,43 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(135deg, #1a1b2e, #3c1c47, #2e2b57);
-  @apply lg:pt-16 dark:bg-slate-900 dark:text-gray-200 min-h-screen flex justify-center items-center
+  @apply pt-8 lg:pt-16 bg-gradient-to-br from-[#aaaced] via-[#e9c1f7] to-[#aaa6f8] dark:from-[#1a1b2e] dark:via-[#3c1c47] dark:to-[#2e2b57] text-slate-800 dark:text-gray-200 min-h-screen flex justify-center items-center lg:text-lg
 }
 
 .container {
-  background: linear-gradient(135deg, #1a1b2e, #3c1c47, #2e2b57);
-  @apply w-11/12 max-w-md p-5 space-y-3 dark:bg-slate-800 rounded-lg min-h-80 shadow-lg shadow-black flex flex-col items-center
+  background: linear-gradient(135deg, #585a99, #9446ad, #6762c4);
+  /* background: linear-gradient(135deg, #23243d, #4f255d, #3b3870); */
+  @apply w-11/12 max-w-md p-5 space-y-3  rounded-lg min-h-80 shadow-lg shadow-black flex flex-col items-center bg-gradient-to-br from-[#9497ef] via-[#e499fd] to-[#9590ef] dark:from-[#333458] dark:via-[#5c2b6c] dark:to-[#454283]
 }
 .heading {
+  text-shadow: 1px 2px 4px gray;;
   @apply text-4xl font-bold mb-4
 }
 
-form {
-  @apply w-full flex justify-center items-center gap-4
+.form {
+  @apply w-full flex flex-wrap gap-2 justify-between items-center md:gap-2 border-b border-slate-600 pb-6 
 }
 
 .text-input-field {
-  @apply px-4 py-2 rounded-md font-semibold duration-100 bg-slate-600 capitalize
+  @apply w-full px-4 py-2 bg-[#ac72ed] dark:bg-[#341b46] placeholder:text-slate-700 dark:placeholder:text-slate-400 rounded-md font-semibold duration-100 capitalize text-center
 }
 
 .btn {
-  @apply bg-purple-600 px-4 py-2 rounded-md font-semibold duration-100 hover:scale-105 active:animate-ping
+  @apply bg-purple-300 dark:bg-purple-600 px-4 py-2 rounded-md font-bold duration-100 hover:scale-105 active:animate-ping capitalize
 }
 
 .completed {
-  @apply line-through text-slate-400
+  @apply line-through text-slate-600 dark:text-slate-400
 }
 
 .flex-between {
   @apply flex justify-between items-center
 }
 
+.list{
+  @apply w-full space-y-4
+}
 .list-item {
-  @apply  flex p-3 border dark:bg-slate-700 border-gray-500 rounded-md justify-between items-center my-2 hover:bg-purple-800 cursor-pointer hover:scale-x-[1.03] duration-100 select-none font-medium capitalize
+  /* background: linear-gradient(135deg, #1a1b2e, #361741, #2e2b57); */
+  @apply  flex p-3 border bg-[#ac72ed] dark:bg-[#341b46] border-gray-500 rounded-md justify-between items-center my-2  cursor-pointer hover:scale-x-[1.03] duration-100 select-none font-bold capitalize backdrop:blur-sm hover:bg-purple-400 dark:hover:bg-purple-800
 }
