@@ -3,17 +3,15 @@
 @tailwind utilities;
 
 body {
-  @apply pt-8 lg:pt-16 bg-gradient-to-br from-[#aaaced] via-[#e9c1f7] to-[#aaa6f8] dark:from-[#1a1b2e] dark:via-[#3c1c47] dark:to-[#2e2b57] text-slate-800 dark:text-gray-200 min-h-screen flex justify-center items-center lg:text-lg
+  @apply pt-12 md:pt-40 bg-gradient-to-br from-[#aaaced] via-[#e9c1f7] to-[#aaa6f8] dark:from-[#1a1b2e] dark:via-[#3c1c47] dark:to-[#2e2b57] text-slate-800 dark:text-gray-200 min-h-screen flex justify-center  lg:text-lg
 }
 
 .container {
-  background: linear-gradient(135deg, #585a99, #9446ad, #6762c4);
-  /* background: linear-gradient(135deg, #23243d, #4f255d, #3b3870); */
-  @apply w-11/12 max-w-md p-5 space-y-3  rounded-lg min-h-80 shadow-lg shadow-black flex flex-col items-center bg-gradient-to-br from-[#9497ef] via-[#e499fd] to-[#9590ef] dark:from-[#333458] dark:via-[#5c2b6c] dark:to-[#454283]
+  @apply w-11/12 max-w-md p-5 space-y-3  rounded-lg min-h-80 h-fit shadow-lg shadow-black flex flex-col items-center bg-gradient-to-br from-[#9497ef] via-[#e499fd] to-[#9590ef] dark:from-[#333458] dark:via-[#5c2b6c] dark:to-[#454283]
 }
 .heading {
   text-shadow: 1px 2px 4px gray;;
-  @apply text-4xl font-bold mb-4
+  @apply text-4xl font-extrabold mb-4
 }
 
 .form {
@@ -39,7 +37,6 @@ body {
 .list{
   @apply w-full space-y-4
 }
-.list-item {
-  /* background: linear-gradient(135deg, #1a1b2e, #361741, #2e2b57); */
-  @apply  flex p-3 border bg-[#ac72ed] dark:bg-[#341b46] border-gray-500 rounded-md justify-between items-center my-2  cursor-pointer hover:scale-x-[1.03] duration-100 select-none font-bold capitalize backdrop:blur-sm hover:bg-purple-400 dark:hover:bg-purple-800
+.list-item { 
+  @apply  flex flex-wrap gap-2 p-3 border bg-[#ac72ed] dark:bg-[#341b46] border-gray-500 rounded-md justify-between items-center my-2  cursor-pointer hover:scale-x-[1.03] duration-100 select-none font-bold capitalize backdrop:blur-sm hover:bg-purple-400 dark:hover:bg-purple-800
 }
